@@ -1,0 +1,10 @@
+services:
+    conekta.base:
+        class: Conekta\Conekta
+        calls:
+            - [ setApiKey, ['%conekta.api_keys.private%'] ]
+        abstract: true
+
+    artesanus.conekta:
+        class: Artesanus\ConektaBundle\Conekta
+        parent: conekta.base

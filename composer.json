@@ -1,0 +1,22 @@
+{
+    "name": "artesanus/conekta-bundle",
+    "type": "symfony-bundle",
+    "description": "ConektaBundle",
+    "keywords": ["Payment", "Gateway", "Conekta", "ConektaBundle"],
+    "homepage": "https://www.artesan.us",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cristian Angulo Nova",
+            "email": "cristianangulonova@gmail.com",
+            "homepage": "http://cristianangulo.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "conekta/conekta-php": "^3.0"
+    },
+    "autoload": {
+        "psr-4": { "Artesanus\\ConektaBundle\\": "" }
+    }
+}
