@@ -6,7 +6,7 @@ Enable several services for inject into of the projects...
 
 For more information check [Conekta documentation](https://github.com/conekta/conekta-php)
 
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/d9491d6b-4401-491f-a072-41fa749ca1e2/mini.png)](https://insight.sensiolabs.com/projects/d9491d6b-4401-491f-a072-41fa749ca1e2)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/c420270d-8a8b-4c0c-acb9-0d8c721a5367/mini.png)](https://insight.sensiolabs.com/projects/c420270d-8a8b-4c0c-acb9-0d8c721a5367)
 
 Installation
 ============
