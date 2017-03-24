@@ -2,10 +2,18 @@
 
 namespace Artesanus\ConektaBundle;
 
+use Conekta\Customer;
+use Conekta\Order;
+
 interface ConektaInterface
 {
     /**
-     * @var array $array
+     * @return Customer
      */
-    public function charge(array $array);
+    public function customer();
+
+    /**
+     * @return Order
+     */
+    public function order();
 }

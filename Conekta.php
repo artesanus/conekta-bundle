@@ -4,23 +4,25 @@ namespace Artesanus\ConektaBundle;
 
 use Conekta\Conekta as ConektaBase;
 use Conekta\Charge;
-use Conekta\Error;
+use Conekta\Customer;
+use Conekta\Order;
 
 class Conekta extends ConektaBase implements ConektaInterface
 {
     /**
-     * @param array $array
-     * @return object
+     * {@inheritdoc}
      */
-    public function charge(array $array)
+    public function customer()
     {
-        try{
-            return Charge::create($array);
+        return Customer::class;
+    }
 
-        }catch(Error $e){
-            return $e;
-        }
-
+    /**
+     * {@inheritdoc}
+     */
+    public function order()
+    {
+        return Order::class;
     }
 }
 

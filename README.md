@@ -85,16 +85,72 @@ services:
         class: AppBundle\Util\MyPrettyService
         arguments: ['@artesanus.conekta']
 ```
-Step 5: Use in Controller
+Step 5: Use in Controller | Service
 
 ```php
 #MyBundle/Controller/MyController.php
 
 public function MyController extends Controlller
 {
+    // Create a instance of service
     $conekta = $this->get('artesanus.conekta');
-    $charge = $conekta->charge(array());
+
+    // Create a instance of Customer
+
+    $customer = $conekta->customer();
+
+    // Create a customer
+
+    $customer = $customer::create(array());
+
+    // Create a instance of Order
+
+    $order = $conekta->order();
+
+    // Create a order
+
+    $order = $order::create(array());
 }
+
+#MyBundle/Util/Payment.php
+
+use Artesanus\ConektaBundle\ConektaInterface;
+
+public function Payment
+{
+
+    /**
+     * @var ConektaInterface $conekta
+     */
+     private $conekta;
+
+    /**
+     * @param ConektaInterface $conekta
+     */
+    public function __construct(ConektaInterface $conekta)
+    {
+        $this->conekta = $conekta;
+    }
+
+    //Or in calls
+
+    /**
+     * @param ConektaInterface $conekta
+     */
+    public function setConekta(ConektaInterface $conekta)
+    {
+        $this->conekta = $conekta;
+    }
+
+    /**
+     * @return ConektaInterface
+     */
+    public function getConekta()
+    {
+        return $this->conekta;
+    }
+}
+
 ```
 
 That's all. Try and fun!!!
