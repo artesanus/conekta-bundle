@@ -14,7 +14,7 @@
         }
     ],
     "require": {
-        "conekta/conekta-php": "^3.0"
+        "conekta/conekta-php": "^3.2"
     },
     "autoload": {
         "psr-4": { "Artesanus\\ConektaBundle\\": "" }
